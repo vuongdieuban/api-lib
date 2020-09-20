@@ -1,0 +1,31 @@
+{
+  "name": "api-lib",
+  "version": "1.0.0",
+  "description": "Client API lib for jobs tracker client, install as a npm package",
+  "main": "index.js",
+  "files": [
+    "dist/**/*"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vuongdieuban/api-lib.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vuongdieuban/api-lib/issues"
+  },
+  "homepage": "https://github.com/vuongdieuban/api-lib#readme",
+  "dependencies": {
+    "axios": "^0.20.0"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "typescript": "^4.0.3"
+  }
+}
