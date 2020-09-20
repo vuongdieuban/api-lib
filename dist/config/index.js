@@ -3,8 +3,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.ApiConfig = exports.OperationMode = void 0;
 var OperationMode;
 (function (OperationMode) {
-    OperationMode[OperationMode["DEV"] = 0] = "DEV";
-    OperationMode[OperationMode["PROD"] = 1] = "PROD";
+    OperationMode["DEV"] = "development";
+    OperationMode["PROD"] = "production";
 })(OperationMode = exports.OperationMode || (exports.OperationMode = {}));
 class ApiConfig {
     static setOperationMode(mode) {

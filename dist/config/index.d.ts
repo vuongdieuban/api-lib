@@ -1,6 +1,6 @@
 export declare enum OperationMode {
-    DEV = 0,
-    PROD = 1
+    DEV = "development",
+    PROD = "production"
 }
 export declare class ApiConfig {
     private static BASE_URL;

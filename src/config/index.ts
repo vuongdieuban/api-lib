@@ -1,6 +1,6 @@
 export enum OperationMode {
-  DEV,
-  PROD,
+  DEV = 'development',
+  PROD = 'production',
 }
 
 export class ApiConfig {
