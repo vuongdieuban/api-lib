@@ -9,7 +9,7 @@ export class ApiConfig {
 
   static setOperationMode(mode: OperationMode): void {
     this.operationMode = mode;
-    this.BASE_URL = mode === OperationMode.DEV ? 'http://api.localhost' : 'http://prod_url';
+    this.BASE_URL = mode === OperationMode.DEV ? 'http://api.jobs-tracker.localhost' : 'http://prod_url';
   }
 
   static getBaseURL(): string {
