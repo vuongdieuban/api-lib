@@ -1,4 +1,4 @@
-import { JobPost, JobPostCreateRequest } from '../models/job-post.model';
+import { JobPost, JobPostCreateRequest } from '../dto/job-post.dto';
 import { HttpService } from './http.service';
 import { ApiConfig } from '../config';
 

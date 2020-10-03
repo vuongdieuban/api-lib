@@ -1,5 +1,5 @@
-import { JobApplicationStatus } from './job-application-status.model';
-import { JobPost } from './job-post.model';
+import { JobApplicationStatus } from './job-application-status.dto';
+import { JobPost } from './job-post.dto';
 
 export interface JobApplicationReorderRequest {
   position?: number;

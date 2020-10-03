@@ -4,7 +4,7 @@ import {
   JobApplication,
   JobApplicationCreateRequest,
   JobApplicationReorderRequest,
-} from '../models/job-application.model';
+} from '../dto/job-application.dto';
 import { HttpService } from './http.service';
 
 export class JobApplicationService {

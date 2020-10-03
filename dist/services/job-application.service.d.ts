@@ -1,4 +1,4 @@
-import { ApplicationUpdatedResponse, JobApplication, JobApplicationCreateRequest, JobApplicationReorderRequest } from '../models/job-application.model';
+import { ApplicationUpdatedResponse, JobApplication, JobApplicationCreateRequest, JobApplicationReorderRequest } from '../dto/job-application.dto';
 export declare class JobApplicationService {
     private readonly BASE_URL;
     private readonly httpService;

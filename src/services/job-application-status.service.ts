@@ -1,4 +1,4 @@
-import { JobApplicationStatus } from '../models/job-application-status.model';
+import { JobApplicationStatus } from '../dto/job-application-status.dto';
 import { HttpService } from './http.service';
 import { ApiConfig } from '../config';
 

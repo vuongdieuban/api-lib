@@ -1,4 +1,4 @@
-import { Platform } from './platform.model';
+import { Platform } from './platform.dto';
 
 interface BaseJobPost {
   title: string;

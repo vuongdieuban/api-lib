@@ -1,4 +1,4 @@
-import { JobPost, JobPostCreateRequest } from '../models/job-post.model';
+import { JobPost, JobPostCreateRequest } from '../dto/job-post.dto';
 export declare class JobPostService {
     private readonly BASE_URL;
     private readonly httpService;

@@ -1,5 +1,5 @@
 import { ApiConfig } from '../config';
-import { User } from '../models/user.model';
+import { User } from '../dto/user.dto';
 import { HttpService } from './http.service';
 
 export class UserService {

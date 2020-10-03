@@ -1,5 +1,5 @@
 import { ApiConfig } from '../config';
-import { Platform } from '../models/platform.model';
+import { Platform } from '../dto/platform.dto';
 import { HttpService } from './http.service';
 
 export class PlatformService {
