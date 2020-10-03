@@ -11,7 +11,7 @@ export class HttpService {
     return this.httpClient.get<T>(url);
   }
 
-  post<T>(url: string, data: any): Promise<AxiosResponse<T>> {
+  post<T>(url: string, data?: any): Promise<AxiosResponse<T>> {
     return this.httpClient.post<T>(url, data);
   }
 
