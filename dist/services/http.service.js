@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.HttpService = void 0;
 const axios_1 = require("axios");
-class HttpService {
+class HttpBaseService {
     constructor() {
         this.httpClient = axios_1.default.create();
     }
@@ -18,6 +18,9 @@ class HttpService {
     delete(url) {
         return this.httpClient.delete(url);
     }
+    setAuthHeader(accessToken) {
+        this.httpClient.defaults.headers.common['Authorization'] = `Bearer ${accessToken}`;
+    }
 }
-exports.HttpService = HttpService;
+exports.HttpService = new HttpBaseService();
 //# sourceMappingURL=http.service.js.map

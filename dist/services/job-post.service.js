@@ -14,7 +14,7 @@ const http_service_1 = require("./http.service");
 const config_1 = require("../config");
 class JobPostService {
     constructor() {
-        this.httpService = new http_service_1.HttpService();
+        this.httpService = http_service_1.HttpService;
         this.BASE_URL = config_1.ApiConfig.getBaseURL();
     }
     getOrCreate(payload) {
