@@ -1,4 +1,4 @@
-import { LoginRequest, LoginResponse, RenewTokenResponse } from 'src/dto/authentication.dto';
+import { LoginRequest, LoginResponse, RenewTokenResponse } from '../dto/authentication.dto';
 export declare class AuthenticationService {
     private readonly BASE_URL;
     private readonly httpService;

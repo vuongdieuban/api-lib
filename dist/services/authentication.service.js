@@ -10,7 +10,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthenticationService = void 0;
-const config_1 = require("src/config");
+const config_1 = require("../config");
 const http_service_1 = require("./http.service");
 class AuthenticationService {
     constructor() {
