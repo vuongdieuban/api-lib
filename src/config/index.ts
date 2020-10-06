@@ -1,3 +1,5 @@
+import { HttpService } from "../services/http.service";
+
 export enum OperationMode {
   DEV = 'development',
   PROD = 'production',
@@ -6,6 +8,7 @@ export enum OperationMode {
 export class ApiConfig {
   private static BASE_URL: string;
   private static operationMode: OperationMode;
+  private static httpService = HttpService
 
   static setOperationMode(mode: OperationMode): void {
     this.operationMode = mode;
@@ -17,5 +20,9 @@ export class ApiConfig {
       throw new Error('Please set operation mode before get base url');
     }
     return this.BASE_URL;
+  }
+
+  static setAuthHeader(accessToken:string):void {
+    this.httpService.setAuthHeader(accessToken)
   }
 }

@@ -1,6 +1,6 @@
 import axios, { AxiosInstance, AxiosResponse } from 'axios';
 
-export class HttpService {
+class HttpBaseService {
   private readonly httpClient: AxiosInstance;
 
   constructor() {
@@ -22,4 +22,10 @@ export class HttpService {
   delete<T>(url: string): Promise<AxiosResponse<T>> {
     return this.httpClient.delete<T>(url);
   }
+
+  setAuthHeader(accessToken:string):void {
+    this.httpClient.defaults.headers.common['Authorization'] = `Bearer ${accessToken}` 
+  }
 }
+
+export const HttpService = new HttpBaseService()

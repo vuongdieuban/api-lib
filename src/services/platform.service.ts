@@ -4,10 +4,9 @@ import { HttpService } from './http.service';
 
 export class PlatformService {
   private readonly BASE_URL: string;
-  private readonly httpService: HttpService;
+  private readonly httpService = HttpService;
 
   constructor() {
-    this.httpService = new HttpService();
     this.BASE_URL = ApiConfig.getBaseURL();
   }
 
