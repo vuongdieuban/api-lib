@@ -1,5 +1,5 @@
-import { ApiConfig } from 'src/config';
-import { LoginRequest, LoginResponse, RenewTokenResponse } from 'src/dto/authentication.dto';
+import { ApiConfig } from '../config';
+import { LoginRequest, LoginResponse, RenewTokenResponse } from '../dto/authentication.dto';
 import { HttpService } from './http.service';
 
 export class AuthenticationService {
