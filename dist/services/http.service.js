@@ -4,7 +4,9 @@ exports.HttpService = void 0;
 const axios_1 = require("axios");
 class HttpBaseService {
     constructor() {
-        this.httpClient = axios_1.default.create();
+        this.httpClient = axios_1.default.create({
+            withCredentials: true
+        });
     }
     get(url) {
         return this.httpClient.get(url);
