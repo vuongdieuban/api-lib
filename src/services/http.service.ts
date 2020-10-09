@@ -4,7 +4,9 @@ class HttpBaseService {
   private readonly httpClient: AxiosInstance;
 
   constructor() {
-    this.httpClient = axios.create();
+    this.httpClient = axios.create({
+      withCredentials:true
+    });
   }
 
   get<T>(url: string) {
