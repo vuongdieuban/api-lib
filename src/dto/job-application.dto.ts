@@ -8,7 +8,7 @@ export interface JobApplicationReorderRequest {
 
 export interface ApplicationUpdatedResponse {
   id: string;
-  statusDisplayPosition: number;
+  position: number;
   statusId: string;
   jobPostId: string;
   userId: string;
@@ -22,7 +22,7 @@ export interface JobApplicationCreateRequest {
 
 export interface JobApplication {
   id: string;
-  statusDisplayPosition: number;
+  position: number;
   status: JobApplicationStatus;
   jobPost: JobPost;
   user: {
