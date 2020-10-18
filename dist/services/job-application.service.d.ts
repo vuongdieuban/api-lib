@@ -6,5 +6,5 @@ export declare class JobApplicationService {
     findAll(): Promise<JobApplication[]>;
     create(payload: JobApplicationCreateRequest): Promise<JobApplication>;
     reorder(id: string, payload: JobApplicationReorderRequest): Promise<ApplicationUpdatedResponse>;
-    archive(id: string): Promise<ApplicationUpdatedResponse>;
+    archive(id: string, archive: boolean): Promise<ApplicationUpdatedResponse>;
 }

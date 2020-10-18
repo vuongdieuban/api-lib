@@ -38,10 +38,10 @@ class JobApplicationService {
             return data;
         });
     }
-    archive(id) {
+    archive(id, archive) {
         return __awaiter(this, void 0, void 0, function* () {
-            const url = `${this.BASE_URL}/job-application/${id}`;
-            const { data } = yield this.httpService.delete(url);
+            const url = `${this.BASE_URL}/job-application/archive/${id}`;
+            const { data } = yield this.httpService.put(url, { archive });
             return data;
         });
     }
