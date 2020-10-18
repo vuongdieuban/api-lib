@@ -9,7 +9,7 @@ export interface JobApplicationReorderRequest {
 export interface ApplicationUpdatedResponse {
   id: string;
   position: number;
-  archived: boolean;
+  archive: boolean;
   statusId: string;
   jobPostId: string;
   userId: string;
@@ -23,7 +23,7 @@ export interface JobApplicationCreateRequest {
 export interface JobApplication {
   id: string;
   position: number;
-  archived: boolean;
+  archive: boolean;
   status: JobApplicationStatus;
   jobPost: JobPost;
   user: {
