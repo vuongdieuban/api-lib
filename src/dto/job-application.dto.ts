@@ -9,6 +9,7 @@ export interface JobApplicationReorderRequest {
 export interface ApplicationUpdatedResponse {
   id: string;
   position: number;
+  archived: boolean;
   statusId: string;
   jobPostId: string;
   userId: string;
@@ -17,17 +18,18 @@ export interface ApplicationUpdatedResponse {
 export interface JobApplicationCreateRequest {
   statusId: string;
   jobPostId: string;
-  userId: string;
 }
 
 export interface JobApplication {
   id: string;
   position: number;
+  archived: boolean;
   status: JobApplicationStatus;
   jobPost: JobPost;
   user: {
     id: string;
     firstName: string;
     lastName: string;
+    email: string;
   };
 }

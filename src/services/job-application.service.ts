@@ -33,9 +33,9 @@ export class JobApplicationService {
     return data;
   }
 
-  async archive(id: string): Promise<ApplicationUpdatedResponse> {
-    const url = `${this.BASE_URL}/job-application/${id}`;
-    const { data } = await this.httpService.delete<ApplicationUpdatedResponse>(url);
+  async archive(id: string, archive: boolean): Promise<ApplicationUpdatedResponse> {
+    const url = `${this.BASE_URL}/job-application/archive/${id}`;
+    const { data } = await this.httpService.put<ApplicationUpdatedResponse>(url, { archive });
     return data;
   }
 }
