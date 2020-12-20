@@ -1,12 +1,18 @@
-import { JobApplicationStatus } from './job-application-status.dto';
+import { Status } from './status.dto';
 import { JobPost } from './job-post.dto';
 
 export interface JobApplicationReorderRequest {
-  position?: number;
+  position: 'top' | 'bottom' | number;
   statusId: string;
 }
 
-export interface ApplicationUpdatedResponse {
+export interface JobApplicationReorderedResponse {
+  id: string;
+  position: number;
+  statusId: string;
+}
+
+export interface JobApplicationUpdatedResponse {
   id: string;
   position: number;
   archive: boolean;
@@ -24,7 +30,7 @@ export interface JobApplication {
   id: string;
   position: number;
   archive: boolean;
-  status: JobApplicationStatus;
+  status: Status;
   jobPost: JobPost;
   user: {
     id: string;

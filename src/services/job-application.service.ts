@@ -1,6 +1,7 @@
 import { ApiConfig } from '../config';
 import {
-  ApplicationUpdatedResponse,
+  JobApplicationReorderedResponse,
+  JobApplicationUpdatedResponse,
   JobApplication,
   JobApplicationCreateRequest,
   JobApplicationReorderRequest,
@@ -27,15 +28,18 @@ export class JobApplicationService {
     return data;
   }
 
-  async reorder(id: string, payload: JobApplicationReorderRequest): Promise<ApplicationUpdatedResponse> {
+  async reorder(
+    id: string,
+    payload: JobApplicationReorderRequest,
+  ): Promise<JobApplicationReorderedResponse> {
     const url = `${this.BASE_URL}/job-application/reorder/${id}`;
-    const { data } = await this.httpService.put<ApplicationUpdatedResponse>(url, payload);
+    const { data } = await this.httpService.put<JobApplicationReorderedResponse>(url, payload);
     return data;
   }
 
-  async archive(id: string, archive: boolean): Promise<ApplicationUpdatedResponse> {
+  async archive(id: string, archive: boolean): Promise<JobApplicationUpdatedResponse> {
     const url = `${this.BASE_URL}/job-application/archive/${id}`;
-    const { data } = await this.httpService.put<ApplicationUpdatedResponse>(url, { archive });
+    const { data } = await this.httpService.put<JobApplicationUpdatedResponse>(url, { archive });
     return data;
   }
 }

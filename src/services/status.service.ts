@@ -1,8 +1,8 @@
-import { JobApplicationStatus } from '../dto/job-application-status.dto';
+import { Status } from '../dto/status.dto';
 import { HttpService } from './http.service';
 import { ApiConfig } from '../config';
 
-export class JobApplicationStatusService {
+export class StatusService {
   private readonly BASE_URL: string;
   private readonly httpService = HttpService;
 
@@ -10,9 +10,9 @@ export class JobApplicationStatusService {
     this.BASE_URL = ApiConfig.getBaseURL();
   }
 
-  async findAll(): Promise<JobApplicationStatus[]> {
+  async findAll(): Promise<Status[]> {
     const url = `${this.BASE_URL}/job-application-status`;
-    const { data } = await this.httpService.get<JobApplicationStatus[]>(url);
+    const { data } = await this.httpService.get<Status[]>(url);
     return data;
   }
 }
