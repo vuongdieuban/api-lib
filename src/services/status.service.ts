@@ -11,7 +11,7 @@ export class StatusService {
   }
 
   async findAll(): Promise<Status[]> {
-    const url = `${this.BASE_URL}/job-application-status`;
+    const url = `${this.BASE_URL}/status`;
     const { data } = await this.httpService.get<Status[]>(url);
     return data;
   }
