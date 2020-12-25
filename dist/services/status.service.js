@@ -19,7 +19,7 @@ class StatusService {
     }
     findAll() {
         return __awaiter(this, void 0, void 0, function* () {
-            const url = `${this.BASE_URL}/job-application-status`;
+            const url = `${this.BASE_URL}/status`;
             const { data } = yield this.httpService.get(url);
             return data;
         });
